@@ -1,73 +1,35 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
 }
 
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
+h1 {
+  margin-bottom: 20px;
 }
 
-h1, h2 {
-  color: #333;
+nav {
+  margin-bottom: 30px;
 }
 
-.item-list {
+.button-list {
   list-style: none;
   padding: 0;
-  max-width: 700px;
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  gap: 15px;
+.button-list li {
+  margin: 10px 0;
 }
 
-.item-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.item-title {
-  font-weight: bold;
-  font-size: 1.05em;
+.cam-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #2c7be5;
+  color: white;
   text-decoration: none;
-  color: #0066cc;
-}
-
-.item-title:hover {
-  text-decoration: underline;
-}
-
-.item-price {
-  font-size: 0.95em;
-  color: #444;
-}
-
-.item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.item a {
+  border-radius: 6px;
   font-weight: bold;
-  text-decoration: none;
-  color: #0066cc;
 }
 
-.item a:hover {
-  text-decoration: underline;
-}
-
-.item p {
-  margin: 4px 0 0;
-  font-size: 0.9em;
-  color: #555;
+.cam-button:hover {
+  background: #1a5fcc;
 }
