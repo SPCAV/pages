@@ -1,36 +1,44 @@
+/* BODY */
+
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
-  background: #f5f7fb;
+  background: #1e1e2f; /* dark theme for control panel */
+  color: #fff;
 }
 
 /* HEADINGS */
 
 h1 {
   margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
 }
 
-/* NAV BAR */
+/* NAVIGATION */
 
 nav {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 nav a {
   display: inline-block;
-  padding: 8px 16px;
-  margin-right: 10px;
+  padding: 10px 20px;
+  margin: 0 8px;
   text-decoration: none;
-  color: white;
-  background: #444;
-  border-radius: 6px;
+  color: #fff;
+  background: #333;
+  border-radius: 8px;
   font-weight: bold;
   transition: 0.2s;
 }
 
 nav a:hover {
-  background: #222;
-  transform: translateY(-1px);
+  background: #555;
+  transform: translateY(-2px);
 }
 
 /* CAMERA GRID */
@@ -41,26 +49,35 @@ nav a:hover {
   gap: 20px;
   list-style: none;
   padding: 0;
-  max-width: 700px;
+  max-width: 800px;
+  margin: 0 auto; /* center the grid */
 }
 
-/* CAMERA BUTTON */
+/* CAMERA BUTTONS (Colored) */
 
 .cam-button {
   display: block;
-  padding: 30px 10px;
-  background: linear-gradient(135deg,#2c7be5,#1a5fcc);
-  color: white;
+  padding: 40px 10px;
+  color: #fff;
   text-decoration: none;
   border-radius: 12px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
-  transition: 0.2s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: all 0.2s ease-in-out;
 }
 
+/* Button Colors (example: red, blue, green, orange) */
+
+.cam-1 { background: linear-gradient(135deg,#e74c3c,#c0392b); }
+.cam-2 { background: linear-gradient(135deg,#3498db,#2980b9); }
+.cam-3 { background: linear-gradient(135deg,#2ecc71,#27ae60); }
+.cam-4 { background: linear-gradient(135deg,#f39c12,#d35400); }
+
+/* Hover Effect */
+
 .cam-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
