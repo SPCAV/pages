@@ -4,13 +4,13 @@ body {
   background: #f5f7fb;
 }
 
-/* Headings */
+/* HEADINGS */
 
 h1 {
   margin-bottom: 20px;
 }
 
-/* NAVIGATION */
+/* NAV BAR */
 
 nav {
   margin-bottom: 30px;
@@ -19,7 +19,7 @@ nav {
 nav a {
   display: inline-block;
   padding: 8px 16px;
-  margin-right: 8px;
+  margin-right: 10px;
   text-decoration: none;
   color: white;
   background: #444;
@@ -33,35 +33,34 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-/* CAMERA BUTTON LIST */
+/* CAMERA GRID */
 
 .button-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
-  max-width: 400px;
-}
-
-.button-list li {
-  margin: 14px 0;
+  max-width: 700px;
 }
 
 /* CAMERA BUTTON */
 
 .cam-button {
   display: block;
-  padding: 16px 20px;
+  padding: 30px 10px;
   background: linear-gradient(135deg,#2c7be5,#1a5fcc);
   color: white;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
   transition: 0.2s;
 }
 
 .cam-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
