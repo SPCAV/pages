@@ -3,7 +3,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
-  background: #1e1e2f; /* dark theme for control panel */
+  background: #1e1e2f;
   color: #fff;
 }
 
@@ -41,43 +41,75 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* CAMERA GRID */
+/* GRID */
 
 .button-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
-  max-width: 800px;
-  margin: 0 auto; /* center the grid */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* CAMERA BUTTONS (Colored) */
+/* CARD */
 
-.cam-button {
-  display: block;
-  padding: 40px 10px;
-  color: #fff;
-  text-decoration: none;
+.button-card {
   border-radius: 12px;
-  font-size: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: 0.2s;
+}
+
+.button-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* TITLE */
+
+.card-title {
+  padding: 20px 10px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  transition: all 0.2s ease-in-out;
 }
 
-/* Button Colors (example: red, blue, green, orange) */
+/* SUB BUTTONS */
+
+.sub-buttons {
+  display: flex;
+}
+
+.sub-btn {
+  flex: 1;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* LOCAL / TAILSCALE */
+
+.sub-btn.local {
+  background: rgba(0,0,0,0.25);
+}
+
+.sub-btn.tailscale {
+  background: rgba(0,0,0,0.45);
+}
+
+/* HOVER */
+
+.sub-btn:hover {
+  filter: brightness(1.2);
+}
+
+/* ORIGINAL COLOR THEMES */
 
 .cam-1 { background: linear-gradient(135deg,#e74c3c,#c0392b); }
 .cam-2 { background: linear-gradient(135deg,#3498db,#2980b9); }
 .cam-3 { background: linear-gradient(135deg,#2ecc71,#27ae60); }
 .cam-4 { background: linear-gradient(135deg,#f39c12,#d35400); }
-
-/* Hover Effect */
-
-.cam-button:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
