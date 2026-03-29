@@ -79,3 +79,62 @@ nav a:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
+
+
+/* BUTTON LIST (GRID LAYOUT) */
+
+.button-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* GROUP CARD */
+
+.button-group {
+  background: #2a2a3d;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* TITLE */
+
+.button-title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* SUB BUTTON CONTAINER */
+
+.sub-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* SMALLER BUTTONS FOR LINKS PAGE */
+
+.sub-buttons .cam-button {
+  padding: 15px 10px;
+  font-size: 14px;
+  flex: 1;
+}
+
+/* OPTIONAL: give Local / Tailscale different colors */
+
+.sub-buttons a:first-child {
+  background: linear-gradient(135deg,#16a085,#1abc9c);
+}
+
+.sub-buttons a:last-child {
+  background: linear-gradient(135deg,#8e44ad,#9b59b6);
+}
