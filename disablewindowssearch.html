@@ -2,50 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Disable Windows Search</title>
+    <title>Windows Tweaks</title>
 
-    <!-- Link to your CSS file -->
+    <!-- Your existing CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Disable Windows Search</h1>
+<h1>Windows 11 Tweaks</h1>
 
-<p>
-just pasted this into PS:
+<h2>Disable Web Search in Start Menu</h2>
+<p>Copy and paste this into PowerShell:</p>
 
-Script to disable web search in win 11 searchbox:
-
- 
-
+<pre><code>
 # Define the registry path
-
 $regPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search"
 
- 
-
 # Create the registry key if it doesn't exist
-
 if (-not (Test-Path $regPath)) {
-
     New-Item -Path $regPath -Force
-
 }
 
- 
-
 # Set the required values
-
 New-ItemProperty -Path $regPath -Name "BingSearchEnabled" -PropertyType DWord -Value 0 -Force
-
 New-ItemProperty -Path $regPath -Name "AllowSearchToUseLocation" -PropertyType DWord -Value 0 -Force
-
 New-ItemProperty -Path $regPath -Name "CortanaConsent" -PropertyType DWord -Value 0 -Force
 
- 
-
 Write-Host "Registry keys successfully created or updated."
-</p>
+</code></pre>
 
 </body>
 </html>
