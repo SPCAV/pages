@@ -42,7 +42,13 @@ nav a:hover {
 }
 
 /* CAMERA GRID */
-@@ -41,26 +49,35 @@ nav a:hover {
+/* NOTE: the selector line was cut off in the pasted diff.
+   Make sure the <ul> on index.html uses class="camera-grid"
+   (or rename this selector to match whatever it uses). */
+
+.camera-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -56,30 +62,28 @@ nav a:hover {
   display: block;
   padding: 40px 10px;
   color: #fff;
-
   text-decoration: none;
   border-radius: 12px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
 }
 
-/* Button Colors (example: red, blue, green, orange) */
+/* Button Colors (red, blue, green, orange) */
 
-.cam-1 { background: linear-gradient(135deg,#e74c3c,#c0392b); }
-.cam-2 { background: linear-gradient(135deg,#3498db,#2980b9); }
-.cam-3 { background: linear-gradient(135deg,#2ecc71,#27ae60); }
-.cam-4 { background: linear-gradient(135deg,#f39c12,#d35400); }
+.cam-1 { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.cam-2 { background: linear-gradient(135deg, #3498db, #2980b9); }
+.cam-3 { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.cam-4 { background: linear-gradient(135deg, #f39c12, #d35400); }
 
 /* Hover Effect */
 
 .cam-button:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
-
 
 /* BUTTON LIST (GRID LAYOUT) */
 
@@ -99,7 +103,7 @@ nav a:hover {
   background: #2a2a3d;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -129,12 +133,14 @@ nav a:hover {
   flex: 1;
 }
 
-/* OPTIONAL: give Local / Tailscale different colors */
+/* LOCAL / TAILSCALE COLORS
+   Classes instead of :first-child / :last-child, so a group with
+   only one button still gets the right color. */
 
-.sub-buttons a:first-child {
-  background: linear-gradient(135deg,#16a085,#1abc9c);
+.sub-buttons .cam-button.local {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
 }
 
-.sub-buttons a:last-child {
-  background: linear-gradient(135deg,#8e44ad,#9b59b6);
+.sub-buttons .cam-button.tailscale {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
 }
