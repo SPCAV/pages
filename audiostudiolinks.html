@@ -1,16 +1,44 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Audio Studio Links</title><link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio Studio Links</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Audio Studio Links</h1>
 
-</head><body><h1>Audio Studio Links</h1><nav><a href="index.html">Home
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
 
-</a></nav><ul class="item-list">
-    
-    <li class="item"><a class="item-title" href="http://192.168.30.40/" target="_blank">
-        Balcony NDI Cam
-      
-      </a></li><li class="item"><a class="item-title" href="http://192.168.30.41" target="_blank">
-        NDI Decoder
-          
-      </a></li><li class="item"><a class="item-title" href="http://192.168.30.42" target="_blank">
-        NDI Controller
-        
-      </a></li><!-- Add more items as needed --></ul></body></html>
+  <ul class="button-list">
+    <li class="button-group">
+      <span class="button-title">Balcony NDI Cam</span>
+      <div class="sub-buttons">
+        <a class="cam-button local" href="http://192.168.30.40/" target="_blank" rel="noopener">Local</a>
+        <!-- <a class="cam-button tailscale" href="http://TAILSCALE-IP-OR-NAME/" target="_blank" rel="noopener">Tailscale</a> -->
+      </div>
+    </li>
+
+    <li class="button-group">
+      <span class="button-title">NDI Decoder</span>
+      <div class="sub-buttons">
+        <a class="cam-button local" href="http://192.168.30.41/" target="_blank" rel="noopener">Local</a>
+        <!-- <a class="cam-button tailscale" href="http://TAILSCALE-IP-OR-NAME/" target="_blank" rel="noopener">Tailscale</a> -->
+      </div>
+    </li>
+
+    <li class="button-group">
+      <span class="button-title">NDI Controller</span>
+      <div class="sub-buttons">
+        <a class="cam-button local" href="http://192.168.30.42/" target="_blank" rel="noopener">Local</a>
+        <!-- <a class="cam-button tailscale" href="http://TAILSCALE-IP-OR-NAME/" target="_blank" rel="noopener">Tailscale</a> -->
+      </div>
+    </li>
+
+    <!-- Add more groups as needed -->
+  </ul>
+</body>
+</html>
